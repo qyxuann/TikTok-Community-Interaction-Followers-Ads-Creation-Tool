@@ -32,4 +32,12 @@
 
 .fa-clipboard-list:before {
     content: "\f46d";
+}
+
+.fa-plus:before {
+    content: "\f067";
+}
+
+.fa-sync:before {
+    content: "\f021";
 } 
