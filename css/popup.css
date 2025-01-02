@@ -207,4 +207,62 @@ h1 {
     vertical-align: middle;
     line-height: 1;
     font-size: 20px;
+}
+
+/* 操作按钮区域 */
+.action-bar {
+    display: flex;
+    gap: 12px;
+    padding: 0 24px;
+    margin-bottom: 24px;
+}
+
+.action-bar .action-btn {
+    height: 32px;
+    padding: 0 16px;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    background: #ffffff;
+    color: #666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.action-bar .action-btn i {
+    font-size: 14px;
+}
+
+.action-bar .action-btn:hover {
+    color: #40a9ff;
+    border-color: #40a9ff;
+    background: #fff;
+}
+
+.action-bar .action-btn.primary {
+    background: #1890ff;
+    border-color: #1890ff;
+    color: white;
+}
+
+.action-bar .action-btn.primary:hover {
+    background: #40a9ff;
+    border-color: #40a9ff;
+}
+
+/* 刷新按钮旋转动画 */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.action-bar .action-btn i.fa-sync.spinning {
+    animation: spin 1s linear infinite;
 } 
