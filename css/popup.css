@@ -209,15 +209,35 @@ h1 {
     font-size: 20px;
 }
 
-/* 操作按钮区域 */
-.action-bar {
-    display: flex;
-    gap: 12px;
-    padding: 0 24px;
-    margin-bottom: 24px;
+/* 数据表格样式 */
+.data-table {
+    margin: 0 24px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.action-bar .action-btn {
+.table-header {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table-header h2 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+}
+
+.table-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.table-actions .action-btn {
     height: 32px;
     padding: 0 16px;
     border: 1px solid #d9d9d9;
@@ -232,23 +252,23 @@ h1 {
     transition: all 0.3s ease;
 }
 
-.action-bar .action-btn i {
+.table-actions .action-btn i {
     font-size: 14px;
 }
 
-.action-bar .action-btn:hover {
+.table-actions .action-btn:hover {
     color: #40a9ff;
     border-color: #40a9ff;
     background: #fff;
 }
 
-.action-bar .action-btn.primary {
+.table-actions .action-btn.primary {
     background: #1890ff;
     border-color: #1890ff;
     color: white;
 }
 
-.action-bar .action-btn.primary:hover {
+.table-actions .action-btn.primary:hover {
     background: #40a9ff;
     border-color: #40a9ff;
 }
@@ -263,6 +283,6 @@ h1 {
     }
 }
 
-.action-bar .action-btn i.fa-sync.spinning {
+.table-actions .action-btn i.fa-sync.spinning {
     animation: spin 1s linear infinite;
 } 
