@@ -1,0 +1,121 @@
+<!-- 设置面板 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="../css/settings.css">
+
+<div id="settingsPanel" class="settings-panel">
+    <div class="settings-header">
+        <h2>配置中心</h2>
+    </div>
+    
+    <div class="settings-content">
+        <div class="settings-section">
+            <h3>飞书配置</h3>
+            <div class="form-group">
+                <label for="feishuAppId">应用ID</label>
+                <input type="text" id="feishuAppId" placeholder="请输入飞书应用ID">
+            </div>
+            <div class="form-group">
+                <label for="feishuAppSecret">应用密钥</label>
+                <input type="password" id="feishuAppSecret" placeholder="请输入飞书应用密钥">
+            </div>
+            <div class="form-group">
+                <label for="feishuAppToken">多维表格 ID (app_token)</label>
+                <div class="input-with-tip">
+                    <input type="text" id="feishuAppToken" placeholder="请输入多维表格 ID">
+                    <div class="input-tip">在多维表格的网页链接中，形如 "bascnxxxxxxxx" 的字符串</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="feishuTableId">数据表 ID (table_id)</label>
+                <div class="input-with-tip">
+                    <input type="text" id="feishuTableId" placeholder="请输入数据表 ID">
+                    <div class="input-tip">在数据表的网页链接中，形如 "tblxxxxxxxx" 的字符串</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="feishuViewId">视图 ID (view_id)</label>
+                <div class="input-with-tip">
+                    <input type="text" id="feishuViewId" placeholder="请输入视图 ID（可选）">
+                    <div class="input-tip">在视图的网页链接中，形如 "vewxxxxxxxx" 的字符串</div>
+                </div>
+            </div>
+            <div class="form-group status-group">
+                <h4>连接状态</h4>
+                <div class="auth-status">
+                    <span id="feishuConnectionStatus" class="status">未连接</span>
+                    <button id="feishuConnectionButton" class="auth-btn">
+                        <img src="../images/feishu.svg" class="btn-icon" alt="飞书">
+                        获取连接
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <h3>TikTok配置</h3>
+            <div class="form-group">
+                <label for="tiktokAppId">应用ID</label>
+                <input type="text" id="tiktokAppId" placeholder="请输入TikTok应用ID">
+            </div>
+            <div class="form-group">
+                <label for="tiktokAppSecret">应用密钥</label>
+                <input type="password" id="tiktokAppSecret" placeholder="请输入TikTok应用密钥">
+            </div>
+            <div class="form-group status-group">
+                <h4>授权状态</h4>
+                <div class="auth-status">
+                    <span id="tiktokAuthStatus" class="status">未授权</span>
+                    <button id="tiktokAuthButton" class="auth-btn">
+                        <img src="../images/tiktok.svg" class="btn-icon" alt="TikTok">
+                        获取授权
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tiktokAdvertiserSelect">广告账户</label>
+                <div class="input-with-tip">
+                    <select id="tiktokAdvertiserSelect" class="form-control" disabled>
+                        <option value="">请先完成TikTok授权</option>
+                    </select>
+                    <div class="input-tip">选择要操作的广告账户</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="settings-section config-actions">
+            <div class="btn-group">
+                <button id="exportConfig" class="config-btn">
+                    <i class="fas fa-download"></i>
+                    导出配置
+                </button>
+                <button id="importConfig" class="config-btn">
+                    <i class="fas fa-upload"></i>
+                    导入配置
+                </button>
+            </div>
+            <label for="configFileInput" class="visually-hidden">选择配置文件</label>
+            <input type="file" id="configFileInput" accept=".json" style="display: none;">
+        </div>
+    </div>
+</div>
+
+<style>
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.status-group h4 {
+    margin: 0 0 8px;
+    font-size: 13px;
+    color: #666;
+    font-weight: normal;
+}
+</style> 

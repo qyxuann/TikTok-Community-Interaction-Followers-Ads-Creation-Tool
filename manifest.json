@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "TikTok社区互动-账号关注广告创建工具",
+  "version": "1.0",
+  "description": "一键创建TikTok社区互动-账号关注广告",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "TikTok社区互动-账号关注广告创建工具"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "identity"
+  ],
+  "host_permissions": [
+    "https://open.feishu.cn/*",
+    "https://business-api.tiktok.com/*",
+    "https://ads.tiktok.com/*"
+  ],
+  "background": {
+    "service_worker": "js/background.js",
+    "type": "module"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAk2jWa9Yx/xgYz5xX/wcMiB2S6RIxB3yvXXHq9EZC0jv4HQUXp7FUehxNYXFbgNg+mhTtBYGIWO+zCXvJl1tgZkrQqzope2hvVS1c5bQMxOFvxpqD/Xz5Yb9GjGJk7nfTxvwZUJVLp5vRUxpVygsM0P4hUqWxhqKhB+NwhZmv7EkCGUHLgKgYd1xDkEh1mq6r+7QLt1E5aUEXuFMnXPZrfE7arBEJMvzjbQg3lnBgqf/3o1HfwFG/B/XrWo3k1QAqBRkA/JpZZsZQnXn5HZwEtLZ7QxKQRrwFD+icvGTQbGLcXGHKGQBm8T8jRjGqfwlXM+qnvUzxFhHRxg+Y5QBxswIDAQAB",
+  "web_accessible_resources": [{
+    "resources": [
+      "html/popup.html",
+      "html/settings.html",
+      "html/logs.html",
+      "js/*",
+      "css/*",
+      "images/*",
+      "icons/*"
+    ],
+    "matches": ["<all_urls>"]
+  }]
+} 
