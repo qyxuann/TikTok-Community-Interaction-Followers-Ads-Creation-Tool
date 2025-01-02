@@ -251,6 +251,8 @@
 }
 
 .config-btn i {
+    margin-right: 8px;
+    vertical-align: middle;
     font-size: 14px;
 }
 
@@ -303,4 +305,11 @@ select.form-control {
 
 select.form-control:disabled {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23999' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+}
+
+/* 图标样式 */
+.config-btn i {
+    margin-right: 8px;
+    vertical-align: middle;
+    font-size: 14px;
 } 
