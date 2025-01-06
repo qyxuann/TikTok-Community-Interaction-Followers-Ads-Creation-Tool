@@ -265,10 +265,10 @@ export async function getTableData(token, appToken, tableId, viewId = '', pageTo
         // 转换数据格式，保持字段顺序
         const records = result.data.items.map(item => {
             // 记录原始数据
-            logger.debug('feishu-api', '处理记录数据', {
-                record_id: item.record_id,
-                fields: Object.keys(item.fields || {})
-            });
+            // logger.debug('feishu-api', '处理记录数据', {
+            //     record_id: item.record_id,
+            //     fields: Object.keys(item.fields || {})
+            // });
 
             return {
                 record_id: item.record_id,
@@ -277,10 +277,10 @@ export async function getTableData(token, appToken, tableId, viewId = '', pageTo
         });
 
         // 记录所有记录ID
-        logger.info('feishu-api', '获取到记录列表', {
-            total: records.length,
-            record_ids: records.map(r => r.record_id)
-        });
+        // logger.info('feishu-api', '获取到记录列表', {
+        //     total: records.length,
+        //     record_ids: records.map(r => r.record_id)
+        // });
 
         // 返回数据，包含分页信息和字段信息
         return {
